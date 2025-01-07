@@ -1,1 +1,22 @@
+#Build a pupeline
 
+name: webstore-pipe
+on: 
+    workflow_dispatch: 
+
+jobs:
+    build_1:
+        name: "Build in Publish from github"
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout
+              uses: actions/checkout@3.5.3
+
+            - name: restore
+              run: dotnet restore
+
+            - run: dotnet build --configuration Release
+              name: building
+
+            - run: dotnet publish --configuration Release -o ./webstore
