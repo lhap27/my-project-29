@@ -6,3 +6,4 @@ This is a basic web app built using the dotnet webapp template, to help demonstr
 
 Refer to the course lessons for more information on how to use this sample web app.
 
+# Editing to include the first commmit and all application
